@@ -1,3 +1,5 @@
+#!/usr/bin python
+
 from sunlight import congress
 from csv import DictWriter
 
@@ -9,5 +11,6 @@ handles = [{'party': x['party'], 'twitter': x['twitter_id']}
 
 with open('congress.csv','w') as f:
 	writer = DictWriter(f, fieldnames = ['party', 'twitter'])
+	writer.writeheader()
 	for x in handles:
 		writer.writerow(x)
