@@ -16,7 +16,7 @@ argstring = directory + "/bin/tweetshovel --verbose " +\
 if not os.path.exists(directory + "/hashtags"):
 	os.makedirs(directory + "/hashtags")
 
-congress = pd.read_csv('congress.csv')
+congress = pd.read_csv('data/congress.csv')
 
 for sname in congress.twitter:
 	call(argstring % (sname.lower(), directory + "/hashtags/" + sname.lower()), 

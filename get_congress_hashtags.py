@@ -29,4 +29,4 @@ hashtag_files = glob('hashtags/*.csv')
 last_week_hashtags =\
 	pd.concat([trim_and_format_hashtags(f) for f in hashtag_files])
 
-last_week_hashtags.to_csv('congress_last_week_tags.csv', index=False)
+last_week_hashtags.to_csv('data/congress_last_week_tags.csv', index=False)
