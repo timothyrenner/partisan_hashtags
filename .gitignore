@@ -2,3 +2,4 @@ env.sh
 *.json
 bin/
 hashtags/
+.ipynb_checkpoints/
