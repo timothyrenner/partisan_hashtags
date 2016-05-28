@@ -7,7 +7,7 @@ directory = os.getcwd()
 argstring = directory + "/bin/tweetshovel --verbose " +\
 		    "--timeline %s --auth twitter_auth.json  " +\
 			"| jq --raw-output '.[] | " +\
-			"[[.user.screen_name], [.created_at] , " +\
+			"[[.user.screen_name], [.created_at], [.id_str], " +\
 			 "[.entities.hashtags | .[].text]] | " +\
 			"combinations | join(\",\")' > %s_hashtags.csv"
 
