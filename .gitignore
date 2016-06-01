@@ -3,3 +3,6 @@ env.sh
 bin/
 hashtags/
 .ipynb_checkpoints/
+*.gexf
+data/congress_last_week_tags.csv
+data/congress.csv
