@@ -4,13 +4,14 @@ import os
 
 leg = congress.all_legislators_in_office()
 
-chamber = lambda x: 'R' if x == 'house' else 'S'
+chamber = lambda x: 'Rep' if x == 'house' else 'Sen'
 
 congress_names = [{'party': x['party'], 
 				   'twitter': x['twitter_id'].lower(),
-				   'name': "{} {} ({}, {})".format(x['first_name'],
-				   							   x['last_name'],
+				   'name': "{}. {} {} ({})".format(
 											   chamber(x['chamber']),
+				   							   x['first_name'],
+				   							   x['last_name'],
 											   x['state'])}
 		   for x in leg if 'twitter_id' in x and
 						   x['twitter_id'] is not None]
